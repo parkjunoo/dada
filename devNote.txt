@@ -1,0 +1,17 @@
+@Id : 기본키 자동 생성
+@GeneratedValue(strategy = GenerationType.AUTO) : 데이터베이스 벤더에 의존하지 않고, 기본키를 할당하는 방법 
+-> Oracle인 경우 SEQUENCE를 자동으로 선택해서 사용함
+
+@NotEmpty : Null을 허용하지 않음
+
+JpaRepository
+- 하나의 인터페이스, 미리 검색 메소드를 정의해둠으로써 메소드를 호출하는 것만으로도 데이터 검색이 가능하도록 함
+- @Repository 어노테이션을 붙여줘야 함 : 인터페이스가 JPARepository임을 나타냄
+
+@DateTimeFormat : 다양한 형식으로 날짜와 시간 값을 입력 받아 올 수 있음, 인자값 pattern 사용
+
+@Column : 테이블의 컬럼명 매핑
+
+set sqlblanklines on : 테이블 생성시 빈 공간 사용할 수 있도록 하는 것
+
+desc 테이블명 : 테이블 구조를 살펴보도록 함
